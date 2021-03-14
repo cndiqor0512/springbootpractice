@@ -1,16 +1,16 @@
 package com.pjs.demo.service;
 
 
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.*;
 
 
 @AllArgsConstructor
 @Service
-public class TestService {//비지니스 로직 처리
+public class TestService {
 
     public String testService() {
         return "test service";
@@ -63,6 +63,38 @@ public class TestService {//비지니스 로직 처리
         returnData.add(data2);
         returnData.add(data3);
         return returnData;
+    }
+    public Map<String, Object> makeTestJsonPractice(){
+        Map<String, Object> result = new HashMap<>();
+
+        ArrayList<HashMap> data = new ArrayList<>();
+        HashMap<String, String> data1 = new HashMap<>();
+        data1.put("id","1");
+        data1.put("name","티모");
+        data1.put("count","10");
+        HashMap<String, String> data2 = new HashMap<>();
+        data2.put("id","2");
+        data2.put("name", "가렌");
+        data2.put("count", "1");
+        HashMap<String, String> data3 = new HashMap<>();
+        data3.put("id","3");
+        data3.put("name", "다리우스");
+        data3.put("count", "14");
+        HashMap<String, String> data4 = new HashMap<>();
+        data2.put("id","4");
+        data2.put("name", "시비르");
+        data2.put("count", "3");
+        result.put("resultcode", 200);
+        data.add(data1);
+        data.add(data2);
+        data.add(data3);
+        data.add(data4);
+        result.put("data", data);
+
+        return result;
+
+
+
     }
 
 }
