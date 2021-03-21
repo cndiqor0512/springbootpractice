@@ -39,5 +39,12 @@ public class TestController {
     public Map<String, Object>  returnJsonPractice() {
         return testService.makeTestJsonPractice();
     }
+
+    @GetMapping(value = "/api/brands")
+    public Map<String, Object> brands() {return testService.makeTestBrands();}
+
+    @GetMapping(value = "/api/itemlist")
+    public Map<String, Object> itemlist() {return testService.makeTestitemList();}
 }
+
 
